@@ -10,14 +10,18 @@ import typeDefs from "./schema.graphql";
 // Create an executable schema
 const schema = makeExecutableSchema({ typeDefs });
 
+const products = ["beanie", "bottle", "cap", "onesie", "shirt", "socks"];
+
 // Add mock resolvers
 const schemaWithMocks = addMocksToSchema({
   schema,
   resolvers: {
     Query: {
       products: () =>
-        Array.from({ length: 5 }, (_element, id) => ({
-          id: `product-${id}`,
+        Array.from({ length: products.length }, (_element, id) => ({
+          id,
+          title: products[id],
+          mediaUrl: `https://storage.googleapis.com/hack-the-supergraph/apollo-${products[id]}.jpg`,
         })),
     },
   },
