@@ -7,6 +7,7 @@ export let api: SetupServer;
 
 export function initialize(): SetupServer {
   const server = setupServer(...handlers);
+  server.listen({ onUnhandledRequest: "bypass" });
   api = server;
   return server;
 }
