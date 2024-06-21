@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.10.6",
+    "@graphql-tools/mock": "^9.0.3",
+    "@graphql-tools/schema": "^10.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@apollo/graphql-testing-library": "^0.2.0",
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.14.2",
     "@types/react": "^18.2.66",
@@ -24,6 +28,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "graphql": "^16.9.0",
     "msw": "^2.3.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
