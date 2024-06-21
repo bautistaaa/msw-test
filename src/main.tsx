@@ -6,7 +6,7 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "./graphql.ts";
 
 async function enableMocking() {
-  const { worker } = await import("./mocks/browser");
+  const { worker } = await import("./mocks/setupWorker");
 
   return worker.start();
 }
