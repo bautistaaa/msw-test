@@ -34,3 +34,7 @@ const { handler, replaceSchema } = createHandler(schemaWithMocks, {
   // Default: delay: { min: 300, max: 300 }
   delay: { min: 200, max: 500 },
 });
+
+const handlers = [handler];
+
+export { handlers, replaceSchema };
